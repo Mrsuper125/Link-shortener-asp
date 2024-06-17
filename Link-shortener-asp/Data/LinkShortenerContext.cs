@@ -12,7 +12,6 @@ public class LinkShortenerContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Database=link_shortener;Password=root");
         base.OnConfiguring(optionsBuilder);
     }
 

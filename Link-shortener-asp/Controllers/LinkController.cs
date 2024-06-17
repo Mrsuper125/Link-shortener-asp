@@ -70,7 +70,6 @@ public class LinkController : Controller
         }
         
         found.Clicks++;
-        _context.Links.Update(found); //Update link usage statistics
         _context.SaveChangesAsync();
 
         return Redirect(found.FullLink); //Finally redirect the user

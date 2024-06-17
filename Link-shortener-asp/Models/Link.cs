@@ -6,10 +6,10 @@ namespace Link_shortener_asp.Models;
 public class Link
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    [Key]
+    [Required]
     public int Id { get; set; }
-    public string FullLink { get; set; }
-    [DataType(DataType.Date)]
-    public DateTime ExpireDate { get; set; }
-    public int Clicks { get; set; }
+
+    [Required] public string FullLink { get; set; } = null!;
+    [DataType(DataType.Date)] [Required] public DateTime ExpireDate { get; set; }
+    [Required] public int Clicks { get; set; }
 }
