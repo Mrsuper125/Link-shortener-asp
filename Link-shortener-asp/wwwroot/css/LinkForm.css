@@ -1,0 +1,79 @@
+.create-link-form{
+    background-color: #6060ff;
+    border-radius: 20px;
+    vertical-align: top;
+    horiz-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    min-width: 200px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.header{
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.form-items > *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+.instruction{
+    font-weight: normal;
+    font-family: "Times New Roman", serif;
+}
+
+.field{
+    padding-left: 3px;
+    min-height: 25px;
+    horiz-align: center;
+    border-radius: 5px;
+    border: 2px black;
+}
+
+.field-with-comment > *{
+    display: inline-block;
+}
+
+.comment{
+    padding-left: 5px;
+    font-size: medium;
+    color: #dc1111;
+}
+
+.create-button{
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 3px 3px 3px 3px;
+    min-width: 20%;
+    background-color: white;
+    font-family: Arial, serif;
+}
+
+.radio-group > *{
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.radio{
+    margin-top: 5px;
+    vertical-align: center;
+    display: inline-block;
+}
+
+.radio-label{
+    vertical-align: center;
+    display: inline-block;
+}
+
+.credits{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}

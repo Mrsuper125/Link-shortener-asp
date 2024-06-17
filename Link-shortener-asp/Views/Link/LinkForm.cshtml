@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+    //TODO: Tailwind this file
+    //TODO: Link validation script
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/LinkForm.css"/>
+    <title>Link shortener</title>
+</head>
+<body>
+<div>
+    <form class="create-link-form" action="/create" method="post">
+        <h1 className="header">Сокращатель ссылок</h1>
+        <hr/>
+        <div className="form-items">
+            <h2 className="instruction"> Введите адрес ссылки:</h2>
+            <div className="field-with-comment">
+                <input type="url" placeholder="Ваша ссылка" className="field" name="fullLink"/>
+            </div>
+            <div>
+                <button className="create-button" type="submit">Создать</button>
+            </div>
+        </div>
+        <hr/>
+        <p className="credits">Сделано с любовью одним школьником</p>
+    </form>
+</div>
+</body>
+</html>
