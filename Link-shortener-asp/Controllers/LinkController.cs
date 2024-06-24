@@ -16,7 +16,7 @@ public class LinkController(LinkShortenerContext context) : Controller
     }
 
     [HttpPost("create")]
-    public async Task<IActionResult> CreateLink(string? fullLink) //When user submits the form
+    public async Task<IActionResult> CreateLink(string? fullLink) //When user submits the form TODO: forbid empty, better on frontend
     {   //TODO: select link expiration date
         if (fullLink == null) //If there's no full link, return an error
         {
