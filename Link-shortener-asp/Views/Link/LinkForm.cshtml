@@ -1,33 +1,31 @@
 @{
     ViewData["Title"] = "Index";
     Layout = null;
-    //TODO: Tailwind this file
-    //TODO: Link validation script
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <link rel="stylesheet" href="~/css/LinkForm.css"/>
+    <link rel="stylesheet" href="~/css/output.css"/>
     <title>Link shortener</title>
 </head>
 <body>
-<div>
-    <form class="create-link-form" action="/create" method="post">
-        <h1 className="header">Сокращатель ссылок</h1>
+<div class="flex h-screen">
+    <form class="bg-blue-500 rounded max-w-96 min-w-80 flex-grow m-auto object-center overflow-auto" action="/create" method="post">
+        <h1 class="font-bold mt-3 mb-3 ml-2 mr-2 leading-none tracking-tight text-2xl">Сокращатель ссылок</h1>
         <hr/>
-        <div className="form-items">
-            <h2 className="instruction"> Введите адрес ссылки:</h2>
-            <div className="field-with-comment">
-                <input type="url" placeholder="Ваша ссылка" className="field" name="fullLink"/>
+        <div class="ml-2">
+            <div class="mt-2 mb-2">
+                <label for="fullLink" class="mb-2 text-xl font-medium text-gray-900"> Введите адрес ссылки:</label>
+                <input type="url" placeholder="Ваша ссылка" class="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5" name="fullLink" id="fullLink"/>
             </div>
             <div>
-                <button className="create-button" type="submit">Создать</button>
+                <button class="text-mb mb-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center" type="submit">Создать</button>
             </div>
         </div>
         <hr/>
-        <p className="credits">Сделано с любовью одним школьником</p>
+        <p class="ml-2 mr-2 mt-1.5 mb-3">Сделано с любовью одним школьником</p>
     </form>
 </div>
 </body>

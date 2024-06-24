@@ -9,11 +9,6 @@ public class LinkShortenerContext : DbContext
     {
         Database.EnsureCreated();
     }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        base.OnConfiguring(optionsBuilder);
-    }
-
+    
     public DbSet<Link> Links { get; set; }
 }
