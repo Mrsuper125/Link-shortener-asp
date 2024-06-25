@@ -52,7 +52,7 @@ public class LinkController(LinkShortenerContext context) : Controller
         Link? found = _context.Links.Find([id]); //Get full link by short's id
         if (found == null) //No such link = 404
         {
-            return NotFound();      //TODO: happens also if link is expired
+            return View("LinkExpired");
         }
 
         if (found.ExpireDate < DateTime.Now) //Delete if expired
