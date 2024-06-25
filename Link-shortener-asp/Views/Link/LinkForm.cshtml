@@ -20,6 +20,24 @@
                 <label for="fullLink" class="mb-2 text-xl font-medium text-gray-900"> Введите адрес ссылки:</label>
                 <input type="url" placeholder="Ваша ссылка" oninvalid="this.setCustomValidity('Введите корректную ссылку')" class="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5" name="fullLink" id="fullLink"/>
             </div>
+            <div class="mb-2">
+                <label for="lifetimePickers" class="mb-2 text-xl font-medium text-gray-900"> Выберите срок жизни ссылки:</label>
+                <div id="lifetimePickers">
+                    <span>
+                        <input type="radio" checked id="hour" value="hour" name="lifetime" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                        <label for="hour" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">1 час</label>
+                    </span>
+                    <span>
+
+                        <input type="radio" id="day" value="day" name="lifetime" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                        <label for="hour" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">1 сутки</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="week" value="week" name="lifetime" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                        <label for="hour" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">1 неделя</label>
+                    </span>
+                </div>
+            </div>
             <div>
                 <button class="text-mb mb-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center" type="submit">Создать</button>
             </div>

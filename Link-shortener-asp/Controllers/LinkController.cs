@@ -16,16 +16,33 @@ public class LinkController(LinkShortenerContext context) : Controller
     }
 
     [HttpPost("create")]
-    public async Task<IActionResult> CreateLink(string? fullLink) //When user submits the form TODO: forbid empty, better on frontend
-    {   //TODO: select link expiration date
+    public async Task<IActionResult> CreateLink(string? fullLink, string? lifetime) //When user submits the form
+    {
+        TimeSpan lifetimeSpan;
         if (fullLink == null) //If there's no full link, return an error
         {
             return NoContent();
         }
 
+        switch (lifetime)
+        {
+            case "hour":
+                lifetimeSpan = TimeSpan.FromHours(1);
+                break;
+            case "day":
+                lifetimeSpan = TimeSpan.FromDays(1);
+                break;
+            case "week":
+                lifetimeSpan = TimeSpan.FromDays(7);
+                break;
+            default:
+                lifetimeSpan = TimeSpan.FromDays(1);
+                break;
+        }
+
         var newLink = new Link
         {
-            FullLink = fullLink, ExpireDate = DateTime.Now + TimeSpan.FromDays(1)
+            FullLink = fullLink, ExpireDate = DateTime.Now + lifetimeSpan
         }; //Create new link lasting for 1 day
 
 
@@ -61,7 +78,7 @@ public class LinkController(LinkShortenerContext context) : Controller
             _context.SaveChangesAsync();
             return View("LinkExpired");
         }
-        
+
         found.Clicks++;
         _context.SaveChangesAsync();
 
