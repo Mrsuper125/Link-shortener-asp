@@ -12,13 +12,13 @@
 </head>
 <body>
 <div class="flex h-screen">
-    <form class="bg-blue-500 rounded max-w-96 min-w-80 flex-grow m-auto object-center overflow-auto" action="/create" method="post">
+    <form id="linkForm" class="bg-blue-500 rounded max-w-96 min-w-80 flex-grow m-auto object-center overflow-auto" action="/create" method="post">
         <h1 class="font-bold mt-3 mb-3 ml-2 mr-2 leading-none tracking-tight text-2xl">Сокращатель ссылок</h1>
         <hr/>
         <div class="ml-2">
             <div class="mt-2 mb-2">
                 <label for="fullLink" class="mb-2 text-xl font-medium text-gray-900"> Введите адрес ссылки:</label>
-                <input type="url" placeholder="Ваша ссылка" class="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5" name="fullLink" id="fullLink"/>
+                <input type="url" placeholder="Ваша ссылка" oninvalid="this.setCustomValidity('Введите корректную ссылку')" class="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5" name="fullLink" id="fullLink"/>
             </div>
             <div>
                 <button class="text-mb mb-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center" type="submit">Создать</button>
